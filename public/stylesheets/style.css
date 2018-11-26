@@ -1,8 +1,57 @@
 body {
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+@media screen and (max-width: 769px) {
+ body {
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+}
+
+.is-vcentered {
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  max-width: 430px;
+}
+
+.navbar-start {
+  justify-content: center;
+  margin: auto;
+}
+
+.navbar-item {
+  color: gray;
+}
+
+.navbar-item:hover {
+  color: black !important;
+}
+
+.navbar-item.active {
+  color: black;
+}
+
+.navbar-menu {
+  margin-bottom: 30px;
+}
+
+.hero.is-info {
+  background-color: #89c4f4;
+}
+
+.hero.is-error {
+  background-color: #FF7F50;
+}
+
+
+.hero.is-info .title,
+.hero.is-info .subtitle {
+  color: #363636;
 }

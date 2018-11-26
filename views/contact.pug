@@ -1,0 +1,29 @@
+
+extends layout
+block content
+    section.hero.is-info
+        div.hero-body
+            div.container
+                h1.title Kontakt
+                h2.subtitle Nehmen sie mit uns Kontakt auf
+    form(action='/contact', name='contact', id='contact', method='post')
+        div.field.half-width-form
+            label.label(for="contactname") Name
+            div.control
+               input#contactname.input(name='name', type='text', value=data.name required class=error.name)
+            
+            label.label(for="contactemail") Email
+            div.control
+                input#contactemail.input(name='email', type='text', value=data.email required class=error.mail)
+            
+            label.label(for="contactsubject") Subject
+            div.control
+               input#contactsubject.input(name='subject', type='text', value=data.subject required class=error.subject)
+            
+            label.label(for="contactmessage") Message
+            div.control
+               textarea#contactmessage.textarea(name='message', cols='40', rows='10' required  class=error.area) #{data.message}
+        div.field
+            div.captchaContainer(class=error.captcha)
+                div.g-recaptcha(data-sitekey="6LcwJjEUAAAAAMn1CNPwMmt4eI0IIG0iYjzKut3M")
+        input.button.is-warning(name='submit' type='submit' value='Absenden')

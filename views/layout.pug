@@ -2,6 +2,27 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/bulma.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    //Captcha
+    script(src='https://www.google.com/recaptcha/api.js')
+  secret
+    //All hail illuminati
   body
+    div.columns.is-centered
+      div.column.is-half.is-flex.is-vcentered
+        img.image.logo.is-hcentered(src="/images/logo_big_2.png")
+    nav(class="navbar" role="navigation" aria-label="main navigation")
+      div(id="mainNavBar" class="navbar-menu")
+        div(class="navbar-start")
+          a.navbar-item(href="/" class=name === 'home' ? 'active' : undefined).
+            Home
+
+          a.navbar-item(href="/team" class=name === 'team' ? 'active' : undefined).
+            Team
+
+          a.navbar-item(href="/contact" class=name === 'contact' ? 'active' : undefined).
+            Contact
     block content

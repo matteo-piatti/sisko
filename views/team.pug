@@ -1,0 +1,22 @@
+extends layout
+block content
+    section.hero.is-warning
+        div.hero-body
+            div.container
+                h1.title Team
+                h2.subtitle Unser kompetentes Entwickler-Team
+    section.section
+        div.container
+            div.container.is-widescreen
+                article.media
+                    figure.media-left
+                        p.image.is-64x64
+                            img(src='/images/matteo.jpg')
+                    div.media-content
+                        div.field
+                            p.control
+                                textarea.textarea(placeholder='Add a comment...')
+
+            div.container.is-widescreen
+                div.notification.
+                    This container is <strong>fullwidth</strong> <em>until</em> the <code>$widescreen</code> breakpoint.
