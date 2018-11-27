@@ -55,3 +55,57 @@ body {
 .hero.is-info .subtitle {
   color: #363636;
 }
+
+.media-column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .media-column {
+    flex-wrap: wrap;
+  }
+
+  .column-left {
+    margin-bottom: 50px;
+  }
+}
+
+.column-left {
+  flex-grow: 0.5;
+  fles-shrink: 1;
+  flex-basis: 20%;
+}
+
+.column-right {
+  padding-left: 20px;
+  flex-grow: 2;
+  flex-shrink: 4;
+}
+
+.team-container {
+  margin-bottom: 50px;
+}
+
+a:hover {
+  color: #89c4f4
+}
+
+.button.is-info:hover {
+  background-color: #89c4f4;
+}
+
+.label {
+  margin-top: 30px;
+}
+
+.is-thin {
+  max-width: 1000px;
+}

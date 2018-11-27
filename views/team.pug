@@ -6,17 +6,35 @@ block content
                 h1.title Team
                 h2.subtitle Unser kompetentes Entwickler-Team
     section.section
-        div.container
+        div.container.team-container
             div.container.is-widescreen
-                article.media
-                    figure.media-left
-                        p.image.is-64x64
-                            img(src='/images/matteo.jpg')
-                    div.media-content
+                div.media-column
+                    div.column-left
+                        p.image.is-square
+                            img.is-rounded(src='/images/matteo.jpg')
+                    div.column-right
                         div.field
-                            p.control
-                                textarea.textarea(placeholder='Add a comment...')
+                            h1.title Matteo Piatti
+                            h1.subtitle CEO - Developer
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
+        div.container.team-container
             div.container.is-widescreen
-                div.notification.
-                    This container is <strong>fullwidth</strong> <em>until</em> the <code>$widescreen</code> breakpoint.
+                div.media-column
+                    div.column-left
+                        p.image.is-square
+                            img.is-rounded(src='/images/kalle.jpg')
+                    div.column-right
+                        div.field
+                            h1.title Kalle Nutivaara
+                            h1.subtitle CEO - Developer
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+        
+        section.hero
+            div.hero-body
+                div.container(style="text-align: center;")
+                    h2.subtitle Kontaktieren Sie uns auf 
+                        a.is-warning(href="mailto:contact@sisko-solutions.ch") contact@sisko-solutions.ch
+                        span  oder unter 
+                            a.is-warning(href="/kontakt") Kontakt
