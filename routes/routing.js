@@ -13,6 +13,10 @@ router.get('/impressum', function (req, res, next) {
   res.render('impressum', { title: 'Sisko - Impressum', name: 'impressum' })
 })
 
+router.get('/keks', function (req, res, next) {
+  res.render('keks', { title: 'kekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskeks', name: 'keks' })
+})
+
 router.get('/contact', function (req, res, next) {
   var subject = 'dini mär'
   var text = ''
