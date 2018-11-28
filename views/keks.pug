@@ -5,22 +5,36 @@ html
     link(rel='stylesheet', href='/stylesheets/bulma.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
+  style.
+    #myvideo {
+        width: 100%;
+        height: 100%;
+    }
 
+    video {
+        width: 100%;
+        height: 100%;
+    }
   body
     <section class="hero is-fullheight video">
         <div class="hero-video">
-            <video playsinline autoplay loop controls oncanplay="this.play()">
-                <source src="images/keks.mp4" type="video/mp4">
-            </video>
+            <iframe src="images/keks.mp4" allow="autoplay" loop="true" controls="false" id="myvideo"></iframe> 
         </div>
-        <div class="hero-body">
-            <div class="container">
-                // Text content goes here (h1 and call to action etc...)
-            </div>
-        </div>
-        <div class="hero-foot">
-            <div class="has-text-centered">
-                // Scroll down arrow here?
-            </div>
-        </div>
+        script.
+            var videoInterval = setInterval(fuck, 1000)
+
+            function fuck () {
+                var iframe = document.getElementById('myvideo').contentDocument
+                var videos = iframe.getElementsByTagName('video')
+                for (var i=0; i < videos.length; i++) {
+                    videos[i].loop = true
+                    videos[i].controls = false
+                    videos[i].controls.style.right = '0'
+                    videos[i].controls.style.bottom = '0'
+                    videos[i].controls.style.minWidth = "100%"
+                    videos[i].controls.style.minHeight = "100%"
+                    videos[i].controls.style.position = "fixed"
+                }
+                clearInterval(videoInterval)
+            }
     </section>
