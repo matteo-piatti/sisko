@@ -16,7 +16,7 @@ router.get('/impressum', function (req, res, next) {
 })
 
 router.get('/keks', function (req, res, next) {
-  res.render('keks', { title: 'kekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskeks', name: 'keks' })
+  res.render('keks', { title: 'kekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskekskeks', name: 'keks' })
 })
 
 router.get('/contact', function (req, res, next) {
