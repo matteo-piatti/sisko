@@ -9,7 +9,7 @@ block content
     section.section
         div.container.is-thin
             div.container.is-fluid
-                form(action='/contact', name='contact', id='contact', method='post')
+                form(action='/kontakt', name='contact', id='contact', method='post')
                     div.field.half-width-form
                         label.label(for="contactname") Name
                         div.control
@@ -26,7 +26,4 @@ block content
                         label.label(for="contactmessage") Nachricht
                         div.control
                         textarea#contactmessage.textarea(name='message', cols='40', rows='10' required  class=error.area) #{data.message}
-                    div.field
-                        div.captchaContainer(class=error.captcha)
-                            div(class="g-recaptcha" data-sitekey="6LdqTH0UAAAAAHkAl4_LMPjkkPSPDY8LZhrRFf9l")
-                    input.button.is-info(name='submit' type='submit' value='Absenden')
+                    input.button.is-info.submit(name='submit' type='submit' value='Absenden')

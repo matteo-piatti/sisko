@@ -183,3 +183,23 @@ span.is-yellow {
 .button.is-yellow:hover {
   background-color:rgba(255,221,87,.8);
 }
+
+@media screen and (max-width: 450px) {
+  .impressum .title {
+    font-size: 1.25em !important;
+  }
+}
+
+.button.submit {
+  margin-top: 20px;
+}
+
+.thisFuckingButton {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .thisFuckingButton {
+    display: none;
+  }
+}
