@@ -31,6 +31,7 @@ router.get('/kontakt', function (req, res, next) {
   var subject = ''
   var text = ''
   res.render('contact', { title: 'Sisko - Kontakt', name: 'contact', subject: subject, field: text, error: 'false', data: req.query, message: message })
+  message = ""
 })
 
 router.post('/kontakt', function (req, res) {
