@@ -3,7 +3,7 @@ var router = express.Router();
 var url = require('url')
 var domain = 'sisko-solutions.ch'
 var mailgun = require('mailgun-js')({apiKey: process.env.apiKey, domain: domain})
-var message = "";
+var message
 
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Sisko - Web Solutions', name: 'home' })
@@ -43,7 +43,6 @@ router.post('/kontakt', function (req, res) {
         }
 
         mailgun.messages().send(mailOpts).then(function (result, result2) {
-                console.log('result:', result, result2)
                 message = "E-Mail wurde erfolgreich versendet!"
                 return res.redirect('/kontakt')
             }).catch(function (error) {
